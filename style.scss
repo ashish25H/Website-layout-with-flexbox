@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(14, 96, 14);
+
+    .links {
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .heading {
+      color: white;
+      margin: auto;
+    }
+    .socialLinks {
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+
+    .sideBar {
+      display: flex;
+      flex-direction: column;
+      width: 280px;
+      background-color: lightgoldenrodyellow;
+
+      .sideBarLinkList {
+        li {
+          list-style: none;
+          margin: 10px;
+
+          a {
+            text-decoration: none;
+            color: rgb(140, 112, 76);
+          }
+        }
+      }
+
+      .sideBarImg {
+        margin: 30px 10px 10px 10px;
+      }
+    }
+
+    .cardAndPara {
+      .paraGraph {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        padding: 10px 10px;
+
+        h2 {
+          padding-left: 10px;
+        }
+
+        P {
+          padding: 10px;
+        }
+      }
+
+      h2 {
+        padding: 10px 22px;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .card1 {
+          flex-basis: 370px;
+          padding: 10px 10px;
+          margin: 5px;
+          border: 2px rgb(235, 246, 235) solid;
+          text-align: center;
+
+          .img {
+            width: 100%;
+          }
+
+          .containt {
+            p {
+              padding: 10px;
+            }
+          }
+
+          button {
+            padding: 5px;
+            background-color: rgb(233, 224, 224);
+            color: rgb(204, 138, 51);
+            border: none;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: rgb(14, 96, 14);
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .links {
+      margin-bottom: 5px;
+    }
+
+    .heading {
+      order: -1;
+      margin-bottom: 5px;
+    }
+    .socialLinks {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main {
+    flex-direction: column-reverse;
+
+    .sideBar {
+      flex-direction: column;
+      width: 100%;
+
+      .sideBarLinkList {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .sideBarImg {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main {
+
+    .cardAndPara {
+      .paraGraph{
+        text-align: center;
+      }
+      .cardHeading{
+        text-align: center;
+      }
+      .cards {
+        .card1 {
+          flex-basis: 0px;
+
+          .img {
+            img {
+              width: 300px;
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
